@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:school_management_app/constants/constants.dart';
 import 'package:school_management_app/screens/teachers/Assignment_Screen/create_assignment_screen.dart';
+import 'package:school_management_app/screens/teachers/Assignment_Screen/data/assignment_data.dart';
 import 'package:school_management_app/screens/teachers/Assignment_Screen/teachers_detail_assignment_screen.dart';
 import 'package:school_management_app/screens/teachers/Assignment_Screen/widgets/assignment_widgets.dart';
-import 'package:school_management_app/screens/teachers/assignment_screen/data/assignment_data.dart';
 
 class TeachersAssignmentScreen extends StatefulWidget {
   const TeachersAssignmentScreen({super.key});
