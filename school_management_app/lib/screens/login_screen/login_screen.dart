@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:school_management_app/components/custom_button.dart';
 import 'package:school_management_app/constants/constants.dart';
 import 'package:school_management_app/screens/admin/Home_Screen/admin_home_screen.dart';
-import 'package:school_management_app/screens/signup_screen/SignUp_Screen.dart';
 import 'package:school_management_app/screens/students/home_screen/home_screen.dart';
 import 'package:school_management_app/screens/teachers/Home_Screen/home_screen.dart';
 
@@ -99,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           buildPasswordField(),
                           sizedBox,
-                          CustomButton(
+                          DefaultButton(
                             onPress: () {
                               if (_formKey.currentState!.validate()) {
                                 if (_emailController.text ==
@@ -127,31 +126,15 @@ class _LoginScreenState extends State<LoginScreen> {
                             iconData: Icons.arrow_forward_outlined,
                           ),
                           sizedBox,
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.pushNamed(
-                                      context, SignUpScreen.routeName);
-                                },
-                                child: const Text(
-                                  'Sign Up',
-                                  style: TextStyle(color: kPrimaryColor, fontSize: 18.0),
-                                ),
-                              ),
-                              const SizedBox(width: kDefaultPadding / 2),
-                              TextButton(
-                                onPressed: () {
-                                  // Navigate to forgot password screen
-                                },
-                                child: const Text(
-                                  'Forgot Password ?',
-                                  style: TextStyle(color: kPrimaryColor,fontSize: 18.0),
-                                ),
-                              ),
-                            ],
-                          ),
+                          const Align(
+                            alignment: Alignment.bottomRight,
+                            child: Text(
+                              'Forgot Password ?',
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                  color: kPrimaryColor, fontSize: 15.0),
+                            ),
+                          )
                         ],
                       ),
                     )

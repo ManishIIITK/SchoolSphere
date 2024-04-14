@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:school_management_app/constants/constants.dart';
 
-class CustomButton extends StatelessWidget {
+class DefaultButton extends StatelessWidget {
   final VoidCallback onPress;
   final String title;
   final IconData iconData;
 
-  const CustomButton(
+  const DefaultButton(
       {super.key,
       required this.onPress,
       required this.title,
