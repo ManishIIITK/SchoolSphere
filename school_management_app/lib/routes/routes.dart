@@ -6,6 +6,9 @@ import 'package:school_management_app/screens/admin/Home_Screen/admin_home_scree
 import 'package:school_management_app/screens/admin/Student_Screen/admin_add_student_screen.dart';
 import 'package:school_management_app/screens/admin/Student_Screen/admin_student_screen.dart';
 import 'package:school_management_app/screens/admin/Teacher_Screen/admin_teacher_screen.dart';
+import 'package:school_management_app/screens/signup_screen/SignUp_Screen.dart';
+import 'package:school_management_app/screens/signup_screen/sign_up_student.dart';
+import 'package:school_management_app/screens/signup_screen/sign_up_teacher.dart';
 import 'package:school_management_app/screens/students/announcement_screen/view_announcement_screen.dart';
 import 'package:school_management_app/screens/students/assignment_screen/assignment_screen.dart';
 import 'package:school_management_app/screens/students/attendance/attendance.dart';
@@ -51,11 +54,12 @@ Map<String, WidgetBuilder> routes = {
   // Admin Routes
   AdminHomeScreen.routeName: (context) => const AdminHomeScreen(),
   AdminProfileScreen.routeName: (context) => const AdminProfileScreen(),
-  AdminAnnouncementScreen.routeName: (context) => const AdminAnnouncementScreen(),
+  AdminAnnouncementScreen.routeName: (context) =>
+      const AdminAnnouncementScreen(),
   AdminHolidayScreen.routeName: (context) => const AdminHolidayScreen(),
-  AdminStudentScreen.routeName:(context) => const AdminStudentScreen(),
-  AdminTeacherScreen.routeName:(context) => const AdminTeacherScreen(),
-  AdminAddStudentScreen.routeName:(context) => AdminAddStudentScreen(),
+  AdminStudentScreen.routeName: (context) => const AdminStudentScreen(),
+  AdminTeacherScreen.routeName: (context) => const AdminTeacherScreen(),
+  AdminAddStudentScreen.routeName: (context) => AdminAddStudentScreen(),
 
   // Students Route
   StudentHomeScreen.routeName: (context) => const StudentHomeScreen(),
@@ -98,5 +102,11 @@ Map<String, WidgetBuilder> routes = {
       const TeacherAnnouncementScreen(),
   TeachersTimeTableScreen.routeName: (context) =>
       const TeachersTimeTableScreen(),
-  TeachersPostAssignmentScreen.routeName:(context) => const TeachersPostAssignmentScreen(),
+  TeachersPostAssignmentScreen.routeName: (context) =>
+      const TeachersPostAssignmentScreen(),
+
+  /////////////////// common
+  SignUpScreen.routeName: (context) => SignUpScreen(),
+  SignUpAsTeacher.routeName: (context) => SignUpAsTeacher(),
+  SignUpAsStudent.routeName: (context) => SignUpAsStudent(),
 };

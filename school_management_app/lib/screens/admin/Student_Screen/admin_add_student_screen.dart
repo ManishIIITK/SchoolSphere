@@ -204,7 +204,7 @@ class AdminAddStudentScreen extends StatelessWidget {
                   },
                 ),
                 const SizedBox(height: 20),
-                DefaultButton(
+                CustomButton(
                 onPress:(){
                   _submitForm(context);
                 }, 
