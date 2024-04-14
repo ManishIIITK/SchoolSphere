@@ -27,13 +27,11 @@ exports.createAdmin = async (req, res, next) => {
       return res.status(400).json({ message: "Invalid role specified" });
     }
 
-    const existingUser = await Promise.any([
-      Student.findOne({ email }),
-      Admin.findOne({ email }),
-      Teacher.findOne({ email }),
-    ]);
+    const existingStudent = await Student.findOne({ email });
+    const existingAdmin = await Admin.findOne({ email });
+    const existingTeacher = await Teacher.findOne({ email });
 
-    if (existingUser) {
+    if (existingStudent || existingAdmin || existingTeacher) {
       return res.status(400).json({ message: "User with this email already exists" });
     }
     const saltRounds = 10;
@@ -125,13 +123,11 @@ exports.createStudent = async (req, res, next) => {
       return res.status(400).json({ message: "Invalid role specified" });
     }
 
-    const existingUser = await Promise.any([
-      Student.findOne({ email }),
-      Admin.findOne({ email }),
-      Teacher.findOne({ email }),
-    ]);
+    const existingStudent = await Student.findOne({ email });
+    const existingAdmin = await Admin.findOne({ email });
+    const existingTeacher = await Teacher.findOne({ email });
 
-    if (existingUser) {
+    if (existingStudent || existingAdmin || existingTeacher) {
       return res.status(400).json({ message: "User with this email already exists" });
     }
     await student.save();

@@ -42,7 +42,7 @@ class _AdminAnnouncementScreenState extends State<AdminAnnouncementScreen> {
                 // maxLines: null,
               ),
               const SizedBox(height: 20),
-              DefaultButton(
+              CustomButton(
                   onPress: () {
                     // Simulate posting an announcement
                     String announcementText = _announcementController.text;
